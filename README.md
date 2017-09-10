@@ -8,4 +8,4 @@
 
 ## User story
 
-# As a user, I can explore popular music across the globe and share my findings with friends.
+### As a user, I can explore popular music across the globe and share my findings with friends.
