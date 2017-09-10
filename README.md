@@ -4,4 +4,4 @@
 
 ## Explore global music trends, using Spotify's Web API.
 
-## Built by Mike Bozee
+## Built in Seattle by [Mike Bozee](https://linkedin.com/in/mikebozee/)
