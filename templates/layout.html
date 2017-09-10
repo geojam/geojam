@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Geo Jam > {% block title %}{% endblock %}</title>
+        <link rel="shortcut icon"
+    href="{{ url_for('static', filename='img/favicon.ico') }}">
+        {# {% assets 'home_css' %} #}
+            <!-- <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"> -->
+        {# {% endassets %} #}
+    </head>
+    <body>
+        {% block body %}
+            <h1>Welcome!</h1>
+        {% endblock %}
+    </body>
+</html>

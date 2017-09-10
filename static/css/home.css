@@ -1,0 +1,13 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: dodgerblue;
+}
+
+h1,
+h2 {
+    color: #fff;
+}
