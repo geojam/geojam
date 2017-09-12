@@ -1,6 +1,44 @@
 {% extends 'layout.html' %}
-{% block title %}Groove Globally{% endblock %}
+{% block title %}Explore global music trends{% endblock %}
 {% block body %}
     {{ super() }}
-    <h2>This is the homepage.</h2>
+    <script>
+        $(function() {
+            $('#the-form').bind('submit', function() {
+                $.getJSON('/_artist_stuff', {
+                    text: $('#input').val()
+                }, function(data) {
+                    $("#result").html(data.result);
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <h2>Explore global music trends</h2>
+    <form action="." method="POST" id="the-form">
+        <input type="text" name="text" id="input">
+        <input type="submit" name="my-form" value="Send" id="submit">
+    </form>
+    <p id="result"></p>
+
+    <!-- <script>
+        $(function() {
+            $('#submit').bind('click', function() {
+                var artist = $('#input').val();
+                $.ajax({
+                    url: '/',
+                    data: $('form').serialize(),
+                    type: 'POST',
+                    success: function(response) {
+                        console.log(response);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script> -->
+
 {% endblock %}

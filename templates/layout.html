@@ -3,15 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>Geo Jam > {% block title %}{% endblock %}</title>
+        <!-- FAVICON -->
         <link rel="shortcut icon"
     href="{{ url_for('static', filename='img/favicon.ico') }}">
-        {# {% assets 'home_css' %} #}
-            <!-- <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"> -->
-        {# {% endassets %} #}
+        <!-- JQUERY -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <!-- FONT: ROBOTO -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <!-- MAIN STYLESHEET -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
     </head>
     <body>
         {% block body %}
-            <h1>Welcome!</h1>
+            <h1>Geo Jam</h1>
         {% endblock %}
     </body>
 </html>
