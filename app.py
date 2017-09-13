@@ -19,6 +19,8 @@ def get_tracks(artist):
     client_credentials_manager = SpotifyClientCredentials()
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
+    # specify limit, type, and country market
+    # market: ISO 3166-1 alpha-2
     results = sp.search(q=artist, limit=20, type='track', market='JP')
     tracks = []
     for i, t in enumerate(results['tracks']['items']):
